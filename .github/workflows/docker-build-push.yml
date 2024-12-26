@@ -30,6 +30,7 @@ jobs:
         env:
           ECR_REPOSITORY: aws_ecr_ecs_github_actions
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          FULL_ECR_IMAGE: ${{ steps.login-ecr.outputs.registry }}/aws_ecr_ecs_github_actions:latest
           IMAGE_TAG: latest 
           IMAGE_NAME: golang-app 
         run: |
